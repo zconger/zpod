@@ -1,0 +1,21 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: zpod
+  namespace: zpod
+spec:
+  selector:
+    matchLabels:
+      app: zpod
+  replicas: 1
+  template:
+    metadata:
+      namespace: zpod
+      labels:
+        app: zpod
+    spec:
+      containers:
+      - name: zpod
+        image: zconger/zpod
+        command: ["sleep"]
+        args: ["86400"]

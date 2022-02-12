@@ -1,8 +1,10 @@
 # Beak Troubleshooting Pod
 
 ## Fire up this pod
-`kubectl apply -f .`
-`kubectl exec -it service/zpod -- bash`
+```
+kubectl apply -f .
+kubectl exec -it service/zpod -- bash
+```
 
 ## Check role identity
 ```shell
